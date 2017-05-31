@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Emmlytics_Example' do
+  pod 'Emmlytics', :path => '../'
+
+  target 'Emmlytics_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

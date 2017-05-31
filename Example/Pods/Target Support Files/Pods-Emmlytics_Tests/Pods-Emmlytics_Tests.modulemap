@@ -1,0 +1,6 @@
+framework module Pods_Emmlytics_Tests {
+  umbrella header "Pods-Emmlytics_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
