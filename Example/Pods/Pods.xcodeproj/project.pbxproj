@@ -18,8 +18,6 @@
 		64710CE4FBA4441A204631453F440BCC /* Emmlytics-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEECB51CA2D4830CA4DB714506FE877 /* Emmlytics-dummy.m */; };
 		65697B3A068ACCF215CC13E4A8AF0478 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		7FFE1A430F61DDAA295A9046DD6E94D5 /* EmmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199120E81CE284AC0FF88C7C2FFAEE7 /* EmmViewController.swift */; };
-		8842A2091ED71A280093EFCE /* emmlytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF6E54902874E0E13D024798F358F24 /* emmlytics.storyboard */; };
-		8842A20A1EDB2BFC0093EFCE /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF10D765F19AFD9A892C11013E0E03D /* Media.xcassets */; };
 		92EE2766A2573F906CD3949CC206B7A7 /* Pods-Emmlytics_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B2C32A37B7B155DA1F9175ED51F33F0 /* Pods-Emmlytics_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B5A84071163771A4F47EC04379A287C /* Pods-Emmlytics_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F24A13CC215589BF168F691D78FEFA8 /* Pods-Emmlytics_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF5DCF20C4CD30DF2D822B137BF24690 /* EmmlyticsCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BA70623970331B82F666ACD60C46B4 /* EmmlyticsCore.swift */; };
@@ -52,7 +50,7 @@
 		2CF6E54902874E0E13D024798F358F24 /* emmlytics.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = emmlytics.storyboard; sourceTree = "<group>"; };
 		3199120E81CE284AC0FF88C7C2FFAEE7 /* EmmViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmmViewController.swift; sourceTree = "<group>"; };
 		321CBE275B35C4182A4F34E8CA72D78C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		400C71D37FE3EFEA8F071AACFC993C54 /* Emmlytics.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Emmlytics.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		400C71D37FE3EFEA8F071AACFC993C54 /* Emmlytics.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Emmlytics.bundle; path = Emmlytics.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8154098306BF6EBD81D932B7FD4BDF /* Pods-Emmlytics_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Emmlytics_Example-dummy.m"; sourceTree = "<group>"; };
 		5F38423BCA718DD1264456C0EB0E7A2A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6106A27E6B61860D4C9591A3D71C8421 /* Pods-Emmlytics_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Emmlytics_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -61,24 +59,24 @@
 		69A6B0748BDF7935406476BC1E10984D /* Pods-Emmlytics_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Emmlytics_Example-resources.sh"; sourceTree = "<group>"; };
 		6B2C32A37B7B155DA1F9175ED51F33F0 /* Pods-Emmlytics_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Emmlytics_Example-umbrella.h"; sourceTree = "<group>"; };
 		6B46CBD0BDE648347851E606008CA68C /* Pods-Emmlytics_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Emmlytics_Example-frameworks.sh"; sourceTree = "<group>"; };
-		6DB75BE41ABA803F86E0888893E6F1E0 /* Pods-Emmlytics_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Emmlytics_Example.modulemap"; sourceTree = "<group>"; };
+		6DB75BE41ABA803F86E0888893E6F1E0 /* Pods-Emmlytics_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Emmlytics_Example.modulemap"; sourceTree = "<group>"; };
 		6EF18AA9A726FD4B5A0EA5D3EA331ACD /* Emmlytics-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Emmlytics-prefix.pch"; sourceTree = "<group>"; };
 		77C4FA9054D17FC31A20593E251FF56E /* Pods-Emmlytics_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Emmlytics_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7ABDBBEA7C1505E6B3481B537CB0BF40 /* Pods_Emmlytics_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emmlytics_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ABDBBEA7C1505E6B3481B537CB0BF40 /* Pods_Emmlytics_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Emmlytics_Tests.framework; path = "Pods-Emmlytics_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3843DB8650709BB7524D4ED873DF89 /* ResourceBundle-Emmlytics-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Emmlytics-Info.plist"; sourceTree = "<group>"; };
 		81658C53D1E51EC632C57DAA1F53B1B7 /* Emmlytics-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Emmlytics-umbrella.h"; sourceTree = "<group>"; };
 		82C7E7FC077740DC6E407CE4A4650EFC /* Emmlytics.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Emmlytics.xcconfig; sourceTree = "<group>"; };
 		873C15ECDBB40341FA932790E6D3FEF7 /* Pods-Emmlytics_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Emmlytics_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		90BA70623970331B82F666ACD60C46B4 /* EmmlyticsCore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmmlyticsCore.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94CCF977E61B15F58CE5B80D06540FC3 /* Pods_Emmlytics_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emmlytics_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94CCF977E61B15F58CE5B80D06540FC3 /* Pods_Emmlytics_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Emmlytics_Example.framework; path = "Pods-Emmlytics_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35C6BC2A081B35DBB5F98F5C634810 /* Pods-Emmlytics_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Emmlytics_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9CF10D765F19AFD9A892C11013E0E03D /* Media.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		A78853A20D786ADE461991C31CEF035D /* Emmlytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Emmlytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A78853A20D786ADE461991C31CEF035D /* Emmlytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Emmlytics.framework; path = Emmlytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB612FACF4AC41D063458C055696F757 /* Pods-Emmlytics_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Emmlytics_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B6C7BF31075751451CEDE870F11B50D5 /* Pods-Emmlytics_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Emmlytics_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		CDDA146B9475037EFAA3013D2361BA77 /* Pods-Emmlytics_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Emmlytics_Tests.modulemap"; sourceTree = "<group>"; };
-		CE84016AB98F50A043DCA3BCFEC9EBE6 /* Emmlytics.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Emmlytics.modulemap; sourceTree = "<group>"; };
+		CDDA146B9475037EFAA3013D2361BA77 /* Pods-Emmlytics_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Emmlytics_Tests.modulemap"; sourceTree = "<group>"; };
+		CE84016AB98F50A043DCA3BCFEC9EBE6 /* Emmlytics.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Emmlytics.modulemap; sourceTree = "<group>"; };
 		D5402FA6945B1BAA2A72AC3D642B02B9 /* Pods-Emmlytics_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Emmlytics_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DEC5CFD5231BCB221E5283BFB1B806C1 /* Pods-Emmlytics_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Emmlytics_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EB08BE11A335B6212E6736590BB035EC /* Pods-Emmlytics_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Emmlytics_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -142,6 +140,7 @@
 			children = (
 				BA7198414851CF4019890133D1AAF902 /* Classes */,
 			);
+			name = Emmlytics;
 			path = Emmlytics;
 			sourceTree = "<group>";
 		};
@@ -215,6 +214,7 @@
 				3199120E81CE284AC0FF88C7C2FFAEE7 /* EmmViewController.swift */,
 				03773BB8DCAC1D7268CC0ED222D9CB3E /* ReplaceMe.swift */,
 			);
+			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -250,6 +250,7 @@
 			children = (
 				E59CCE69D0F7A0A3CABBA6FF2639F6A0 /* Assets */,
 			);
+			name = Emmlytics;
 			path = Emmlytics;
 			sourceTree = "<group>";
 		};
@@ -276,6 +277,7 @@
 				2CF6E54902874E0E13D024798F358F24 /* emmlytics.storyboard */,
 				9CF10D765F19AFD9A892C11013E0E03D /* Media.xcassets */,
 			);
+			name = Assets;
 			path = Assets;
 			sourceTree = "<group>";
 		};
@@ -414,8 +416,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8842A2091ED71A280093EFCE /* emmlytics.storyboard in Resources */,
-				8842A20A1EDB2BFC0093EFCE /* Media.xcassets in Resources */,
 				4E402AE4705CBD248788571B3EA328AF /* Emmlytics.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

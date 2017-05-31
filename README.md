@@ -1,6 +1,4 @@
 # Emmlytics
-
-[![CI Status](http://img.shields.io/travis/mcBontempi/Emmlytics.svg?style=flat)](https://travis-ci.org/mcBontempi/Emmlytics)
 [![Version](https://img.shields.io/cocoapods/v/Emmlytics.svg?style=flat)](http://cocoapods.org/pods/Emmlytics)
 [![License](https://img.shields.io/cocoapods/l/Emmlytics.svg?style=flat)](http://cocoapods.org/pods/Emmlytics)
 [![Platform](https://img.shields.io/cocoapods/p/Emmlytics.svg?style=flat)](http://cocoapods.org/pods/Emmlytics)
@@ -22,7 +20,7 @@ pod "Emmlytics"
 
 ## Author
 
-mcBontempi, mcbontempi@gmail.com
+Emmlytics
 
 ## License
 
