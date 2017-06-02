@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Emmlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+       //The following three Lines are all you need to configure.
+        
+        UserDefaults.standard.set("Dtaylor@gmail.com", forKey: "emmlyticsUserID")
+        UserDefaults.standard.set("https://emmlytics.mynetgear.com:8080/", forKey: "emmlyticsURL")
+        UserDefaults.standard.set("Pomodoroban", forKey: "emmlyticsAppId")
+        
+        //typical event below!
+        
+        Emmlytics().sendAnalytics(event: "appload")
+        
+        
         return true
     }
 

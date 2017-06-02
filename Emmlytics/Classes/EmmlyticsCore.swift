@@ -39,7 +39,6 @@ func deviceRemainingFreeSpaceInBytes() -> Int64? {
     let systemVersion = UIDevice.current.systemVersion
     let model = UIDevice.current.model
     let battery = UIDevice.current.batteryLevel
-
     let batterystate = UIDevice.current.batteryState.rawValue
     let orientation = UIDevice.current.orientation.rawValue
     let localizedmodel = UIDevice.current.localizedModel
@@ -65,9 +64,17 @@ public class Emmlytics
 {
     //Setup Fallback Variables
     public init() {} // not sure why i have to add this POS. Stack Overflow is your friend
-    public var AppID = "changeme"
-    public var UserID = "changeme"
-    public var url = "changeme"
+
+    var AppID = UserDefaults.standard.value(forKey: "emmlyticsAppId") as! String
+    var UserID = UserDefaults.standard.value(forKey: "emmlyticsUserID") as! String
+    var url = UserDefaults.standard.value(forKey: "emmlyticsURL") as! String
+    
+ 
+    
+    
+    
+    //Just data and stuff.
+    
     var DataCarrierName = "No Carrier"
     var Datacountrycodeiso = "Unknown"
     var Datacountrycode = "Unknown"
@@ -106,21 +113,7 @@ public func sendAnalytics(event:String)
         }
         UIDevice.current.isBatteryMonitoringEnabled = true
         let battery = UIDevice.current.batteryLevel
-//        
-//        print(systemVersion)
-//        print(model)
-//        print(battery)
-//        print(batterystate)
-//        print(orientation)
-//        print(localizedmodel)
-//        print(devicename)
-//        print(systemname)
-//        print (DataCarrierName)
-//        print (Datacountrycodeiso)
-//        print (Datacountrycode)
-//        print (Datanetworkcode)
-//        print (currentssid)
-//        
+   
         let URLString = url + "analytic"
         let bodyParameters = [
             
@@ -132,7 +125,7 @@ public func sendAnalytics(event:String)
             "Battery": battery,
             "BatteryState": batterystate,
             "Ssid": currentssid,
-            "UniqueID":uniqueid,
+            "DeviceID": uniqueid,
             "Orientation": orientation,
             "Locale": locale,
             "LocalizedModel":localizedmodel,
@@ -177,17 +170,16 @@ public func sendAnalytics(event:String)
         session.finishTasksAndInvalidate()
     }
     
-    public class func show(viewController: UIViewController, url:String, appid:String, userID:String) {
-
+    
+  // ---------------------------------- SHOW VIEW CONTROLLER --------------------------------------------------------
+    public class func show(viewController: UIViewController){
+        Emmlytics().sendAnalytics(event: "appfeedback")
+        
         let bundle = Bundle(identifier:"org.cocoapods.Emmlytics")
         
         let storyboard = UIStoryboard(name: "emmlytics", bundle: bundle)
         let controller = storyboard.instantiateInitialViewController() as! emmViewController
-        
-        controller.url = url
-        controller.appid = appid
-        controller.UserID = userID
-        
+
         viewController.present(controller, animated: true) {
         }
     }
@@ -202,8 +194,7 @@ public func sendFeedback(feedback: String, rating: Int)
             "UserID": UserID,
             "Rating": rating,
             "feedback": feedback,
-            //"PowerStatus":status,
-            //"language":language
+            "DeviceID": uniqueid
             
         ] as [String : Any]
         
@@ -293,12 +284,18 @@ extension URL {
 
 
     
-func SendNetmon(url:String,AppID: String, UserID: String,call: String,method: String,result:String,latency:String,bytesmoved: String )
+func SendNetmon(call: String,method: String,result:String,latency:String,bytesmoved: String )
     {
+        
+        var AppID = UserDefaults.standard.value(forKey: "emmlyticsAppId") as! String
+        var UserID = UserDefaults.standard.value(forKey: "emmlyticsUserID") as! String
+        var url = UserDefaults.standard.value(forKey: "emmlyticsURL") as! String
+        
         let URLString = url+"netmon"
         let bodyParameters = [
             "AppID": AppID,
             "UserID": UserID,
+            "DeviceID": uniqueid,
             "URL":call,
             "Method":method,
             "Result":result,
@@ -379,9 +376,11 @@ extension URLSession {
                     let datastring = teststring.substring(to: endIndex)
                     // Im so sorry about this - its a quick and dirty
                     
-                    if URLfield! != "http://emmlytics.mynetgear.com:8080/netmon"{
                     
-                        SendNetmon(url:"http://emmlytics.mynetgear.com:8080/", AppID: "1234", UserID: "Justyn", call:URLfield!, method: request.httpMethod!, result: String(statusCode), latency: elapsedString, bytesmoved: datastring)
+                    var url = UserDefaults.standard.value(forKey: "emmlyticsURL") as! String
+                    if URLfield! != url + "netmon"{
+                    
+                        SendNetmon(call:URLfield!, method: request.httpMethod!, result: String(statusCode), latency: elapsedString, bytesmoved: datastring)
                     
                     //--------------------------------------------------------------
                     }
