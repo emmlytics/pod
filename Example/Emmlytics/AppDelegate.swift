@@ -1,10 +1,4 @@
-//
-//  AppDelegate.swift
-//  Emmlytics
-//
-//  Created by mcBontempi on 05/25/2017.
-//  Copyright (c) 2017 mcBontempi. All rights reserved.
-//
+
 
 import UIKit
 import Emmlytics
@@ -22,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        //The following three Lines are all you need to configure.
         
         UserDefaults.standard.set("Dtaylor@gmail.com", forKey: "emmlyticsUserID")
-        UserDefaults.standard.set("https://emmlytics.mynetgear.com:8080/", forKey: "emmlyticsURL")
+        UserDefaults.standard.set("https://emmlytics.mynetgear.com:8443/", forKey: "emmlyticsURL")
         UserDefaults.standard.set("Pomodoroban", forKey: "emmlyticsAppId")
         
         //typical event below!
