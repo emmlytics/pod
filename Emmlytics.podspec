@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Emmlytics'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Mobile App Analytics for Enterprises'
 
 # This description is used to generate tags and improve search results.
