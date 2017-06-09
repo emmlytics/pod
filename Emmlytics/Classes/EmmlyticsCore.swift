@@ -172,17 +172,32 @@ public func sendAnalytics(event:String)
     
     
   // ---------------------------------- SHOW VIEW CONTROLLER --------------------------------------------------------
+//    public class func show(viewController: UIViewController){
+//        Emmlytics().sendAnalytics(event: "appfeedback")
+//        
+//        let bundle = Bundle(identifier:"org.cocoapods.Emmlytics")
+//        
+//        let storyboard = UIStoryboard(name: "emmlytics", bundle: bundle)
+//        let controller = storyboard.instantiateInitialViewController() as! emmViewController
+//
+//        viewController.present(controller, animated: true) {
+//        }
+//    }
+
     public class func show(viewController: UIViewController){
         Emmlytics().sendAnalytics(event: "appfeedback")
         
-        let bundle = Bundle(identifier:"org.cocoapods.Emmlytics")
-        
+        let frameworkBundle = Bundle(identifier:"org.cocoapods.Emmlytics")
+        let bundleURL = frameworkBundle?.resourceURL?.appendingPathComponent("Emmlytics.bundle")
+        let bundle = Bundle(url: bundleURL!)
         let storyboard = UIStoryboard(name: "emmlytics", bundle: bundle)
         let controller = storyboard.instantiateInitialViewController() as! emmViewController
-
         viewController.present(controller, animated: true) {
         }
     }
+    
+    
+    
 
 // ---------------------------------- Send DATA --------------------------------------------------------
 public func sendFeedback(feedback: String, rating: Int)
