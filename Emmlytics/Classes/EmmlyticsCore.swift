@@ -160,7 +160,7 @@ public class Emmlytics
         viewController.present(controller, animated: true) {
         }
     }
-
+    
     public func sendFeedback(feedback: String, rating: Int)
     {
         let URLString = url + "feedback"
@@ -173,7 +173,7 @@ public class Emmlytics
             "DeviceID": uniqueid
             
             ] as [String : Any]
-
+        
         let sessionConfig = URLSessionConfiguration.default
         
         let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
@@ -227,11 +227,11 @@ extension URL {
 
 func SendNetmon(call: String,method: String,result:String,latency:String,bytesmoved: String )
 {
-    var AppID = UserDefaults.standard.value(forKey: "emmlyticsAppId") as! String
-    var UserID = UserDefaults.standard.value(forKey: "emmlyticsUserID") as! String
-    var url = UserDefaults.standard.value(forKey: "emmlyticsURL") as! String
-    
+    let AppID = UserDefaults.standard.value(forKey: "emmlyticsAppId") as! String
+    let UserID = UserDefaults.standard.value(forKey: "emmlyticsUserID") as! String
+    let url = UserDefaults.standard.value(forKey: "emmlyticsURL") as! String
     let URLString = url+"netmon"
+    
     let bodyParameters = [
         "AppID": AppID,
         "UserID": UserID,
@@ -273,6 +273,7 @@ func SendNetmon(call: String,method: String,result:String,latency:String,bytesmo
 extension URLSession {
     
     open override class func initialize() {
+        
         // make sure this isn't a subclass
         guard self === URLSession.self else { return }
         let originalSelector = #selector((self.dataTask(with:completionHandler:)) as (URLSession) -> (URLRequest, @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask)
@@ -286,47 +287,36 @@ extension URLSession {
         var currentTime: TimeInterval = 0
         
         return my_dataTaskWithRequest(with: request, completionHandler: { (data, response, error) in
+        
+            
             do {
                 if let data = data {
-                    
                     let resultJson = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject]
                     currentTime = NSDate.timeIntervalSinceReferenceDate
                     let elapsedTime = currentTime - startTime
-                    
-                    
-                    
-                    //--------------------------------------------------------------
-                    
                     let URLfield = response?.url?.absoluteString
-                    print ("URL:",URLfield!)
-                    print ( "Request :",request.httpMethod!)
-                    print("Bytes Sent :",data)
-                    
+                   // print ("URL:",URLfield!)
+                   // print ( "Request :",request.httpMethod!)
+                   // print("Bytes Sent :",data)
                     let elapsedString = String(format: "%.1f",Double(elapsedTime * 1000))
-                    print ("Round Trip Response time (ms) ",elapsedString, " ms")
+                    //print ("Round Trip Response time (ms) ",elapsedString, " ms")
                     let statusCode = (response as! HTTPURLResponse).statusCode
                     print ("Status : ", statusCode)
-                    
                     let teststring: String = "\(data)"
-                    
                     let endIndex = teststring.index(teststring.endIndex, offsetBy: -6)
                     let datastring = teststring.substring(to: endIndex)
-                    // Im so sorry about this - its a quick and dirty
+                    let url = UserDefaults.standard.value(forKey: "emmlyticsURL") as! String
                     
+                    if (URLfield! !=  url + "netmon" && URLfield! !=  url + "analytic" && URLfield! !=  url + "feedback")
                     
-                    var url = UserDefaults.standard.value(forKey: "emmlyticsURL") as! String
-                    if URLfield! != url + "netmon"{
-                        
+                    {
+                        print("writing")
                         SendNetmon(call:URLfield!, method: request.httpMethod!, result: String(statusCode), latency: elapsedString, bytesmoved: datastring)
-                        
-                        //--------------------------------------------------------------
                     }
                 }
                 else {
-                    
                     print ( "Request",request.httpMethod?.description)
                     print ( "Error :----",error.debugDescription)
-                    
                 }
             } catch {
                 print("Swizzelled Error -> \(error)")
