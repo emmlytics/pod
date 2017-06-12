@@ -275,10 +275,10 @@ extension URLSession {
     open override class func initialize() {
         
         // make sure this isn't a subclass
-        // guard self === URLSession.self else { return }
-       // let originalSelector = #selector((self.dataTask(with:completionHandler:)) as (URLSession) -> (URLRequest, @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask)
-        //let swizzledSelector = #selector((self.my_dataTaskWithRequest(with:completionHandler:)) as (URLSession) -> (URLRequest, @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask)
-       // swizzling(self, originalSelector, swizzledSelector)
+         guard self === URLSession.self else { return }
+       let originalSelector = #selector((self.dataTask(with:completionHandler:)) as (URLSession) -> (URLRequest, @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask)
+        let swizzledSelector = #selector((self.my_dataTaskWithRequest(with:completionHandler:)) as (URLSession) -> (URLRequest, @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask)
+       swizzling(self, originalSelector, swizzledSelector)
         
         //This is to disable the monitoring capability
         
