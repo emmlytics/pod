@@ -34,47 +34,34 @@ func deviceRemainingFreeSpaceInBytes() -> Int64? {
     return freeSize.int64Value
 }
 
-
-
-    let systemVersion = UIDevice.current.systemVersion
-    let model = UIDevice.current.model
-    let battery = UIDevice.current.batteryLevel
-    let batterystate = UIDevice.current.batteryState.rawValue
-    let orientation = UIDevice.current.orientation.rawValue
-    let localizedmodel = UIDevice.current.localizedModel
-    let devicename = UIDevice.current.name
-    let systemname = UIDevice.current.systemName
-    let networkInfo = CTTelephonyNetworkInfo()
-    let carrier = networkInfo.subscriberCellularProvider
-    let carrierName = carrier?.carrierName;
-    let countrycodeiso = carrier?.isoCountryCode;
-    let countrycode = carrier?.mobileCountryCode;
-    let networkcode = carrier?.mobileNetworkCode;
-    let uniqueid = UIDevice.current.identifierForVendor!.uuidString
-    let networkString = networkInfo.currentRadioAccessTechnology
-
-
+let systemVersion = UIDevice.current.systemVersion
+let model = UIDevice.current.model
+let battery = UIDevice.current.batteryLevel
+let batterystate = UIDevice.current.batteryState.rawValue
+let orientation = UIDevice.current.orientation.rawValue
+let localizedmodel = UIDevice.current.localizedModel
+let devicename = UIDevice.current.name
+let systemname = UIDevice.current.systemName
+let networkInfo = CTTelephonyNetworkInfo()
+let carrier = networkInfo.subscriberCellularProvider
+let carrierName = carrier?.carrierName;
+let countrycodeiso = carrier?.isoCountryCode;
+let countrycode = carrier?.mobileCountryCode;
+let networkcode = carrier?.mobileNetworkCode;
+let uniqueid = UIDevice.current.identifierForVendor!.uuidString
+let networkString = networkInfo.currentRadioAccessTechnology
 
 
 public class Emmlytics
-
-    
-    
-    
 {
     //Setup Fallback Variables
     public init() {} // not sure why i have to add this POS. Stack Overflow is your friend
-
+    
     var AppID = UserDefaults.standard.value(forKey: "emmlyticsAppId") as! String
     var UserID = UserDefaults.standard.value(forKey: "emmlyticsUserID") as! String
     var url = UserDefaults.standard.value(forKey: "emmlyticsURL") as! String
     
- 
-    
-    
-    
     //Just data and stuff.
-    
     var DataCarrierName = "No Carrier"
     var Datacountrycodeiso = "Unknown"
     var Datacountrycode = "Unknown"
@@ -83,9 +70,7 @@ public class Emmlytics
     var currentssid = "Not Connected"
     var memory = "unavailable"
     
-  
-    
-public func sendAnalytics(event:String)
+    public func sendAnalytics(event:String)
     {
         if carrier != nil {DataCarrierName = (carrierName! as String)}
         if carrier != nil {Datacountrycodeiso = (countrycodeiso! as String)}
@@ -93,11 +78,11 @@ public func sendAnalytics(event:String)
         if carrier != nil {Datanetworkcode = (networkcode! as String)}
         
         if networkString == CTRadioAccessTechnologyLTE{
-          connectivity = "4G"
+            connectivity = "4G"
         }else if networkString == CTRadioAccessTechnologyWCDMA{
             connectivity = "3G"
         }else if networkString == CTRadioAccessTechnologyEdge{
-           connectivity = "EDGE"
+            connectivity = "EDGE"
         }
         
         let ssid = getWiFiSsid()
@@ -108,12 +93,12 @@ public func sendAnalytics(event:String)
         
         
         if let bytes = deviceRemainingFreeSpaceInBytes() {
-         memory = "\(bytes)"
+            memory = "\(bytes)"
             
         }
         UIDevice.current.isBatteryMonitoringEnabled = true
         let battery = UIDevice.current.batteryLevel
-   
+        
         let URLString = url + "analytic"
         let bodyParameters = [
             
@@ -137,13 +122,7 @@ public func sendAnalytics(event:String)
             "Datanetworkcode": Datanetworkcode,
             "AvailableMemory": memory,
             
-            
-            
-            
-            
-        ] as [String : Any]
-        
-        
+            ] as [String : Any]
         
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
@@ -170,22 +149,19 @@ public func sendAnalytics(event:String)
         session.finishTasksAndInvalidate()
     }
     
-    
-  // ---------------------------------- SHOW VIEW CONTROLLER --------------------------------------------------------
     public class func show(viewController: UIViewController){
         Emmlytics().sendAnalytics(event: "appfeedback")
         
-        let bundle = Bundle(identifier:"org.cocoapods.Emmlytics")
-        
+        let frameworkBundle = Bundle(identifier:"org.cocoapods.Emmlytics")
+        let bundleURL = frameworkBundle?.resourceURL?.appendingPathComponent("Emmlytics.bundle")
+        let bundle = Bundle(url: bundleURL!)
         let storyboard = UIStoryboard(name: "emmlytics", bundle: bundle)
         let controller = storyboard.instantiateInitialViewController() as! emmViewController
-
         viewController.present(controller, animated: true) {
         }
     }
-
-// ---------------------------------- Send DATA --------------------------------------------------------
-public func sendFeedback(feedback: String, rating: Int)
+    
+    public func sendFeedback(feedback: String, rating: Int)
     {
         let URLString = url + "feedback"
         
@@ -196,64 +172,40 @@ public func sendFeedback(feedback: String, rating: Int)
             "feedback": feedback,
             "DeviceID": uniqueid
             
-        ] as [String : Any]
+            ] as [String : Any]
         
-        /* Configure session, choose between:
-         * defaultSessionConfiguration
-         * ephemeralSessionConfiguration
-         * backgroundSessionConfigurationWithIdentifier:
-         And set session-wide properties, such as: HTTPAdditionalHeaders,
-         HTTPCookieAcceptPolicy, requestCachePolicy or timeoutIntervalForRequest.
-         */
         let sessionConfig = URLSessionConfiguration.default
         
-        /* Create session, and optionally set a URLSessionDelegate. */
         let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
         
         guard let URL = URL(string: URLString) else {return}
         var request = URLRequest(url: URL)
         request.httpMethod = "POST"
         
-        // Headers
-        
         request.addValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        
-        // Form URL-Encoded Body
         
         let bodyString = bodyParameters.queryParameters
         request.httpBody = bodyString.data(using: .utf8, allowLossyConversion: true)
         
-        /* Start a new Task */
         let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
             if (error == nil) {
-                // Success
                 let statusCode = (response as! HTTPURLResponse).statusCode
                 print("URL Session Task Succeeded: HTTP \(statusCode)")
             }
             else {
-                // Failure
                 print("URL Session Task Failed: %@", error!.localizedDescription);
             }
         })
         task.resume()
         session.finishTasksAndInvalidate()
     }
-
-    
 }
-
 
 protocol URLQueryParameterStringConvertible {
     var queryParameters: String {get}
 }
 
 extension Dictionary : URLQueryParameterStringConvertible {
-    /**
-     This computed property returns a query parameters string from the given NSDictionary. For
-     example, if the input is @{@"day":@"Tuesday", @"month":@"January"}, the output
-     string will be @"day=Tuesday&month=January".
-     @return The computed parameters string.
-     */
     var queryParameters: String {
         var parts: [String] = []
         for (key, value) in self {
@@ -264,78 +216,64 @@ extension Dictionary : URLQueryParameterStringConvertible {
         }
         return parts.joined(separator: "&")
     }
-    
 }
 
 extension URL {
-    /**
-     Creates a new URL by adding the given query parameters.
-     @param parametersDictionary The query parameter dictionary to add.
-     @return A new URL.
-     */
     func appendingQueryParameters(_ parametersDictionary : Dictionary<String, String>) -> URL {
         let URLString : String = String(format: "%@?%@", self.absoluteString, parametersDictionary.queryParameters)
         return URL(string: URLString)!
-       
-        
     }
-
 }
 
-
-    
 func SendNetmon(call: String,method: String,result:String,latency:String,bytesmoved: String )
-    {
-        
-        var AppID = UserDefaults.standard.value(forKey: "emmlyticsAppId") as! String
-        var UserID = UserDefaults.standard.value(forKey: "emmlyticsUserID") as! String
-        var url = UserDefaults.standard.value(forKey: "emmlyticsURL") as! String
-        
-        let URLString = url+"netmon"
-        let bodyParameters = [
-            "AppID": AppID,
-            "UserID": UserID,
-            "DeviceID": uniqueid,
-            "URL":call,
-            "Method":method,
-            "Result":result,
-            "Latency":latency,
-            "DataMoved":bytesmoved
-        ]
-        
-        
-        
-        
-        let sessionConfig = URLSessionConfiguration.default
-        let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
-        
-        guard let URL = URL(string: URLString) else {return}
-        var request = URLRequest(url: URL)
-        request.httpMethod = "POST"
-        request.addValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        
-        let bodyString = bodyParameters.queryParameters
-        request.httpBody = bodyString.data(using: .utf8, allowLossyConversion: true)
-        
-        /* Start a new Task */
-        let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
-            if (error == nil) {
-                // Success
-                let statusCode = (response as! HTTPURLResponse).statusCode
-                print("URL Session Task Succeeded: HTTP \(statusCode)")
-            }
-            else {
-                // Failure
-                print("URL Session Task Failed: %@", error!.localizedDescription);
-            }
-        })
-        task.resume()
-        session.finishTasksAndInvalidate()
-    }
- 
+{
+    let AppID = UserDefaults.standard.value(forKey: "emmlyticsAppId") as! String
+    let UserID = UserDefaults.standard.value(forKey: "emmlyticsUserID") as! String
+    let url = UserDefaults.standard.value(forKey: "emmlyticsURL") as! String
+    let URLString = url+"netmon"
+    
+    let bodyParameters = [
+        "AppID": AppID,
+        "UserID": UserID,
+        "DeviceID": uniqueid,
+        "URL":call,
+        "Method":method,
+        "Result":result,
+        "Latency":latency,
+        "DataMoved":bytesmoved
+    ]
+    
+    let sessionConfig = URLSessionConfiguration.default
+    let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
+    
+    guard let URL = URL(string: URLString) else {return}
+    var request = URLRequest(url: URL)
+    request.httpMethod = "POST"
+    request.addValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
+    
+    let bodyString = bodyParameters.queryParameters
+    request.httpBody = bodyString.data(using: .utf8, allowLossyConversion: true)
+    
+    /* Start a new Task */
+    let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+        if (error == nil) {
+            // Success
+            let statusCode = (response as! HTTPURLResponse).statusCode
+            print("URL Session Task Succeeded: HTTP \(statusCode)")
+        }
+        else {
+            // Failure
+            print("URL Session Task Failed: %@", error!.localizedDescription);
+        }
+    })
+    task.resume()
+    session.finishTasksAndInvalidate()
+}
+
 extension URLSession {
     
     open override class func initialize() {
+        
         // make sure this isn't a subclass
         guard self === URLSession.self else { return }
         let originalSelector = #selector((self.dataTask(with:completionHandler:)) as (URLSession) -> (URLRequest, @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask)
@@ -349,47 +287,37 @@ extension URLSession {
         var currentTime: TimeInterval = 0
         
         return my_dataTaskWithRequest(with: request, completionHandler: { (data, response, error) in
+        
+            
             do {
                 if let data = data {
                     
                     var resultJson = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject]
                     currentTime = NSDate.timeIntervalSinceReferenceDate
                     let elapsedTime = currentTime - startTime
-                    
-                    
-                    
-                    //--------------------------------------------------------------
-                    
                     let URLfield = response?.url?.absoluteString
-                    print ("URL:",URLfield!)
-                    print ( "Request :",request.httpMethod!)
-                    print("Bytes Sent :",data)
-                    
+                   // print ("URL:",URLfield!)
+                   // print ( "Request :",request.httpMethod!)
+                   // print("Bytes Sent :",data)
                     let elapsedString = String(format: "%.1f",Double(elapsedTime * 1000))
-                    print ("Round Trip Response time (ms) ",elapsedString, " ms")
+                    //print ("Round Trip Response time (ms) ",elapsedString, " ms")
                     let statusCode = (response as! HTTPURLResponse).statusCode
                     print ("Status : ", statusCode)
-                
                     let teststring: String = "\(data)"
-                    
                     let endIndex = teststring.index(teststring.endIndex, offsetBy: -6)
                     let datastring = teststring.substring(to: endIndex)
-                    // Im so sorry about this - its a quick and dirty
+                    let url = UserDefaults.standard.value(forKey: "emmlyticsURL") as! String
                     
+                    if (URLfield! !=  url + "netmon" && URLfield! !=  url + "analytic" && URLfield! !=  url + "feedback")
                     
-                    var url = UserDefaults.standard.value(forKey: "emmlyticsURL") as! String
-                    if URLfield! != url + "netmon"{
-                    
+                    {
+                        print("writing")
                         SendNetmon(call:URLfield!, method: request.httpMethod!, result: String(statusCode), latency: elapsedString, bytesmoved: datastring)
-                    
-                    //--------------------------------------------------------------
                     }
                 }
                 else {
-                    
                     print ( "Request",request.httpMethod?.description)
                     print ( "Error :----",error.debugDescription)
-                    
                 }
             } catch {
                 print("Swizzelled Error -> \(error)")

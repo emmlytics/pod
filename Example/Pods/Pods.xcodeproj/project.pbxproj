@@ -7,37 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01F2A100E8EB14334B106D317B1E14CD /* emmlytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF6E54902874E0E13D024798F358F24 /* emmlytics.storyboard */; };
+		0AAED72A3F4608EDD63C88E1D5F34C4C /* EmmlyticsCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BD4D51C88819BA8BF6B7AE94A4D48 /* EmmlyticsCore.swift */; };
 		0D890A6CF8688F5F5E402756C7D94F33 /* Pods-Emmlytics_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 013D3D1A19B1B09B43423A2888992672 /* Pods-Emmlytics_Tests-dummy.m */; };
-		0F6AE72E380733F3082103C8951408D2 /* Emmlytics-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 81658C53D1E51EC632C57DAA1F53B1B7 /* Emmlytics-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		101745147B9AF6F36B66F853C2F9B095 /* Pods-Emmlytics_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8154098306BF6EBD81D932B7FD4BDF /* Pods-Emmlytics_Example-dummy.m */; };
-		1E6BAC5668DA31941A6E5DCD74EE46E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		3F71BB0C071C1A6F1A1D2B1FAC0BE9FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		4E402AE4705CBD248788571B3EA328AF /* Emmlytics.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 400C71D37FE3EFEA8F071AACFC993C54 /* Emmlytics.bundle */; };
-		64710CE4FBA4441A204631453F440BCC /* Emmlytics-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEECB51CA2D4830CA4DB714506FE877 /* Emmlytics-dummy.m */; };
 		65697B3A068ACCF215CC13E4A8AF0478 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		7FFE1A430F61DDAA295A9046DD6E94D5 /* EmmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199120E81CE284AC0FF88C7C2FFAEE7 /* EmmViewController.swift */; };
-		88EBA07E1EE1B56E000159F9 /* emmlytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF6E54902874E0E13D024798F358F24 /* emmlytics.storyboard */; };
-		88EBA07F1EE1B655000159F9 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF10D765F19AFD9A892C11013E0E03D /* Media.xcassets */; };
+		7D75077924699CAF6551CFC4703C2834 /* emmlytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF6E54902874E0E13D024798F358F24 /* emmlytics.storyboard */; };
+		7DACD125B07C20A636F16D04FAFA04CA /* EmmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B904F48A5AFDAEF826C5ED9DFC3D7704 /* EmmViewController.swift */; };
+		88FD64B41EEDF51800AF9140 /* emmlytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF6E54902874E0E13D024798F358F24 /* emmlytics.storyboard */; };
+		8FAC67AA8338C96AD4BC834C41AF230E /* Emmlytics.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 400C71D37FE3EFEA8F071AACFC993C54 /* Emmlytics.bundle */; };
 		92EE2766A2573F906CD3949CC206B7A7 /* Pods-Emmlytics_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B2C32A37B7B155DA1F9175ED51F33F0 /* Pods-Emmlytics_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9847BABDE6F6085A93235917F72BB96C /* Emmlytics-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEECB51CA2D4830CA4DB714506FE877 /* Emmlytics-dummy.m */; };
 		9B5A84071163771A4F47EC04379A287C /* Pods-Emmlytics_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F24A13CC215589BF168F691D78FEFA8 /* Pods-Emmlytics_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF5DCF20C4CD30DF2D822B137BF24690 /* EmmlyticsCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BA70623970331B82F666ACD60C46B4 /* EmmlyticsCore.swift */; };
-		FB1539309983327BF7408B5A055111F5 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF10D765F19AFD9A892C11013E0E03D /* Media.xcassets */; };
+		C0D61DC8C5F11B6A6B0CE3ECF481AF13 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF10D765F19AFD9A892C11013E0E03D /* Media.xcassets */; };
+		C6FDE45EEB2518CC36AABA0EB2CB4C6F /* Emmlytics-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 81658C53D1E51EC632C57DAA1F53B1B7 /* Emmlytics-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCEF8E605EF96FC0649FF85D23D516C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2C16083251FAE2FC83702057EB12A35A /* PBXContainerItemProxy */ = {
+		7DC909749FA47A17C0AD97934709CDE3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 53F7FFD9B75A790328DACD2BBC62950F;
+			remoteGlobalIDString = A34CA1C72238F2F8ABBBA94FACE80301;
 			remoteInfo = "Emmlytics-Emmlytics";
 		};
 		E13FA65FB2B1C8048FD8009C5FE691AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 01033EA40E965EEB873942779BADDAF8;
+			remoteGlobalIDString = 06D018167EA6F4BA161320839900F3D4;
 			remoteInfo = Emmlytics;
 		};
 /* End PBXContainerItemProxy section */
@@ -48,11 +47,11 @@
 		0F24A13CC215589BF168F691D78FEFA8 /* Pods-Emmlytics_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Emmlytics_Tests-umbrella.h"; sourceTree = "<group>"; };
 		1DEECB51CA2D4830CA4DB714506FE877 /* Emmlytics-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Emmlytics-dummy.m"; sourceTree = "<group>"; };
 		2CF6E54902874E0E13D024798F358F24 /* emmlytics.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = emmlytics.storyboard; sourceTree = "<group>"; };
-		3199120E81CE284AC0FF88C7C2FFAEE7 /* EmmViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmmViewController.swift; sourceTree = "<group>"; };
 		321CBE275B35C4182A4F34E8CA72D78C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		400C71D37FE3EFEA8F071AACFC993C54 /* Emmlytics.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Emmlytics.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8154098306BF6EBD81D932B7FD4BDF /* Pods-Emmlytics_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Emmlytics_Example-dummy.m"; sourceTree = "<group>"; };
 		5F38423BCA718DD1264456C0EB0E7A2A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		608BD4D51C88819BA8BF6B7AE94A4D48 /* EmmlyticsCore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmmlyticsCore.swift; sourceTree = "<group>"; };
 		6106A27E6B61860D4C9591A3D71C8421 /* Pods-Emmlytics_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Emmlytics_Tests-resources.sh"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		66253702EB155DC5DD039D6FD0983BB0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,7 +66,6 @@
 		81658C53D1E51EC632C57DAA1F53B1B7 /* Emmlytics-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Emmlytics-umbrella.h"; sourceTree = "<group>"; };
 		82C7E7FC077740DC6E407CE4A4650EFC /* Emmlytics.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Emmlytics.xcconfig; sourceTree = "<group>"; };
 		873C15ECDBB40341FA932790E6D3FEF7 /* Pods-Emmlytics_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Emmlytics_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		90BA70623970331B82F666ACD60C46B4 /* EmmlyticsCore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmmlyticsCore.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94CCF977E61B15F58CE5B80D06540FC3 /* Pods_Emmlytics_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emmlytics_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35C6BC2A081B35DBB5F98F5C634810 /* Pods-Emmlytics_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Emmlytics_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -75,6 +73,7 @@
 		A78853A20D786ADE461991C31CEF035D /* Emmlytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Emmlytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB612FACF4AC41D063458C055696F757 /* Pods-Emmlytics_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Emmlytics_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B6C7BF31075751451CEDE870F11B50D5 /* Pods-Emmlytics_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Emmlytics_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		B904F48A5AFDAEF826C5ED9DFC3D7704 /* EmmViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmmViewController.swift; sourceTree = "<group>"; };
 		CDDA146B9475037EFAA3013D2361BA77 /* Pods-Emmlytics_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Emmlytics_Tests.modulemap"; sourceTree = "<group>"; };
 		CE84016AB98F50A043DCA3BCFEC9EBE6 /* Emmlytics.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Emmlytics.modulemap; sourceTree = "<group>"; };
 		D5402FA6945B1BAA2A72AC3D642B02B9 /* Pods-Emmlytics_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Emmlytics_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +82,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		35BB71E65BBA4DCE0F8ADCB1BA225AF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C1D59F08E05BA44B52016092187872D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -91,18 +97,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		518B6776510C4543A95E9F4620AEE973 /* Frameworks */ = {
+		43209C2BCF38E32FAC875F90E6377C0E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9B20CFC0AB537E651270A4F83C170926 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E6BAC5668DA31941A6E5DCD74EE46E1 /* Foundation.framework in Frameworks */,
+				FCEF8E605EF96FC0649FF85D23D516C2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01350C41314286C035C3355A72D980C0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				608BD4D51C88819BA8BF6B7AE94A4D48 /* EmmlyticsCore.swift */,
+				B904F48A5AFDAEF826C5ED9DFC3D7704 /* EmmViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		2405057B741038941EC4E6E280300228 /* Pods-Emmlytics_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,14 +143,6 @@
 			path = "Target Support Files/Pods-Emmlytics_Example";
 			sourceTree = "<group>";
 		};
-		43A827066140E5BE8D8FAE740445F5B8 /* Emmlytics */ = {
-			isa = PBXGroup;
-			children = (
-				BA7198414851CF4019890133D1AAF902 /* Classes */,
-			);
-			path = Emmlytics;
-			sourceTree = "<group>";
-		};
 		5279244E055D27E5CF3BB1AF76DA88AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +152,14 @@
 				7ABDBBEA7C1505E6B3481B537CB0BF40 /* Pods_Emmlytics_Tests.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		75124786FE1A418612ABBD07BD56B606 /* Emmlytics */ = {
+			isa = PBXGroup;
+			children = (
+				01350C41314286C035C3355A72D980C0 /* Classes */,
+			);
+			path = Emmlytics;
 			sourceTree = "<group>";
 		};
 		77B8446D793EF00E63F5C92385A816EB /* Pods-Emmlytics_Tests */ = {
@@ -204,16 +212,6 @@
 				C79A87EED78B88C332C5400B307A875E /* Emmlytics */,
 			);
 			name = Resources;
-			path = ../..;
-			sourceTree = SOURCE_ROOT;
-		};
-		BA7198414851CF4019890133D1AAF902 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				90BA70623970331B82F666ACD60C46B4 /* EmmlyticsCore.swift */,
-				3199120E81CE284AC0FF88C7C2FFAEE7 /* EmmViewController.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -227,7 +225,7 @@
 		C334B929D9841E74C60262DB576B38CE /* Emmlytics */ = {
 			isa = PBXGroup;
 			children = (
-				43A827066140E5BE8D8FAE740445F5B8 /* Emmlytics */,
+				75124786FE1A418612ABBD07BD56B606 /* Emmlytics */,
 				AA018F77C7F863F0DC9F312553237E37 /* Resources */,
 				9482D346DDDC2A56B77B085B7DE175D3 /* Support Files */,
 			);
@@ -296,30 +294,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		791FAA9B218935CA9E4BDDAB5F1F95E1 /* Headers */ = {
+		5CF1E9D10EC44136D0E628948A5B5374 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F6AE72E380733F3082103C8951408D2 /* Emmlytics-umbrella.h in Headers */,
+				C6FDE45EEB2518CC36AABA0EB2CB4C6F /* Emmlytics-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		01033EA40E965EEB873942779BADDAF8 /* Emmlytics */ = {
+		06D018167EA6F4BA161320839900F3D4 /* Emmlytics */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BFC1E520EE0F59A0906067AC27EC1E07 /* Build configuration list for PBXNativeTarget "Emmlytics" */;
+			buildConfigurationList = D992A0BCC2D25321657D5BF13340BB3E /* Build configuration list for PBXNativeTarget "Emmlytics" */;
 			buildPhases = (
-				EA4F874A104BE33ED403A875A5B21108 /* Sources */,
-				9B20CFC0AB537E651270A4F83C170926 /* Frameworks */,
-				72BF1BBA4004375366C2609D3069FE43 /* Resources */,
-				791FAA9B218935CA9E4BDDAB5F1F95E1 /* Headers */,
+				D04C2E15D8AF1191B475591D6E62B094 /* Sources */,
+				43209C2BCF38E32FAC875F90E6377C0E /* Frameworks */,
+				FF325CE990857044A67CCA6149D146E1 /* Resources */,
+				5CF1E9D10EC44136D0E628948A5B5374 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6FA247A60F9355C56006A326CA7F2EDD /* PBXTargetDependency */,
+				19BEA903936D823A8A330A5DE8C4441F /* PBXTargetDependency */,
 			);
 			name = Emmlytics;
 			productName = Emmlytics;
@@ -344,13 +342,13 @@
 			productReference = 94CCF977E61B15F58CE5B80D06540FC3 /* Pods_Emmlytics_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		53F7FFD9B75A790328DACD2BBC62950F /* Emmlytics-Emmlytics */ = {
+		A34CA1C72238F2F8ABBBA94FACE80301 /* Emmlytics-Emmlytics */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F10DDEAD0D7E8053F0B00CF5D65C27F6 /* Build configuration list for PBXNativeTarget "Emmlytics-Emmlytics" */;
+			buildConfigurationList = CC24ABA05FA357D0B3972EEAB2B583FF /* Build configuration list for PBXNativeTarget "Emmlytics-Emmlytics" */;
 			buildPhases = (
-				53C2E84756B7948B1833093441CF627C /* Sources */,
-				518B6776510C4543A95E9F4620AEE973 /* Frameworks */,
-				F177A5D475F28937A8B4BD7ADCCC8CE0 /* Resources */,
+				E6E47F4AD8EA8CC5206C345A18D9DF1B /* Sources */,
+				35BB71E65BBA4DCE0F8ADCB1BA225AF1 /* Frameworks */,
+				A9DCBF1D1786108D849886B8B696DB17 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -399,8 +397,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				01033EA40E965EEB873942779BADDAF8 /* Emmlytics */,
-				53F7FFD9B75A790328DACD2BBC62950F /* Emmlytics-Emmlytics */,
+				06D018167EA6F4BA161320839900F3D4 /* Emmlytics */,
+				A34CA1C72238F2F8ABBBA94FACE80301 /* Emmlytics-Emmlytics */,
 				2CA7F02D20C9602BB92D8A605FE1DDAB /* Pods-Emmlytics_Example */,
 				EA61EAFEB75BB2CBCB6E23778C442D8C /* Pods-Emmlytics_Tests */,
 			);
@@ -408,35 +406,27 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		72BF1BBA4004375366C2609D3069FE43 /* Resources */ = {
+		A9DCBF1D1786108D849886B8B696DB17 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88EBA07E1EE1B56E000159F9 /* emmlytics.storyboard in Resources */,
-				88EBA07F1EE1B655000159F9 /* Media.xcassets in Resources */,
-				4E402AE4705CBD248788571B3EA328AF /* Emmlytics.bundle in Resources */,
+				7D75077924699CAF6551CFC4703C2834 /* emmlytics.storyboard in Resources */,
+				C0D61DC8C5F11B6A6B0CE3ECF481AF13 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F177A5D475F28937A8B4BD7ADCCC8CE0 /* Resources */ = {
+		FF325CE990857044A67CCA6149D146E1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01F2A100E8EB14334B106D317B1E14CD /* emmlytics.storyboard in Resources */,
-				FB1539309983327BF7408B5A055111F5 /* Media.xcassets in Resources */,
+				88FD64B41EEDF51800AF9140 /* emmlytics.storyboard in Resources */,
+				8FAC67AA8338C96AD4BC834C41AF230E /* Emmlytics.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		53C2E84756B7948B1833093441CF627C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		586E1629E780C22653155E8087E59EB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -453,13 +443,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA4F874A104BE33ED403A875A5B21108 /* Sources */ = {
+		D04C2E15D8AF1191B475591D6E62B094 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64710CE4FBA4441A204631453F440BCC /* Emmlytics-dummy.m in Sources */,
-				AF5DCF20C4CD30DF2D822B137BF24690 /* EmmlyticsCore.swift in Sources */,
-				7FFE1A430F61DDAA295A9046DD6E94D5 /* EmmViewController.swift in Sources */,
+				9847BABDE6F6085A93235917F72BB96C /* Emmlytics-dummy.m in Sources */,
+				0AAED72A3F4608EDD63C88E1D5F34C4C /* EmmlyticsCore.swift in Sources */,
+				7DACD125B07C20A636F16D04FAFA04CA /* EmmViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6E47F4AD8EA8CC5206C345A18D9DF1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,14 +466,14 @@
 		04263C8EC2749B0C7281DB2D8B95D620 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Emmlytics;
-			target = 01033EA40E965EEB873942779BADDAF8 /* Emmlytics */;
+			target = 06D018167EA6F4BA161320839900F3D4 /* Emmlytics */;
 			targetProxy = E13FA65FB2B1C8048FD8009C5FE691AD /* PBXContainerItemProxy */;
 		};
-		6FA247A60F9355C56006A326CA7F2EDD /* PBXTargetDependency */ = {
+		19BEA903936D823A8A330A5DE8C4441F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Emmlytics-Emmlytics";
-			target = 53F7FFD9B75A790328DACD2BBC62950F /* Emmlytics-Emmlytics */;
-			targetProxy = 2C16083251FAE2FC83702057EB12A35A /* PBXContainerItemProxy */;
+			target = A34CA1C72238F2F8ABBBA94FACE80301 /* Emmlytics-Emmlytics */;
+			targetProxy = 7DC909749FA47A17C0AD97934709CDE3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -517,7 +514,7 @@
 			};
 			name = Debug;
 		};
-		3003E6BEA5E0280E44A215E4C262AB36 /* Debug */ = {
+		34F7836A2E97C8C56923501D8BBE5491 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82C7E7FC077740DC6E407CE4A4650EFC /* Emmlytics.xcconfig */;
 			buildSettings = {
@@ -532,42 +529,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
-		};
-		48C79B09704DA200F90DB20070B1D2EB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82C7E7FC077740DC6E407CE4A4650EFC /* Emmlytics.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Emmlytics/Emmlytics-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Emmlytics/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Emmlytics/Emmlytics.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Emmlytics;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
+			name = Release;
 		};
 		4A276A205E6CAFE2E466B76BB7049A57 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -730,7 +692,42 @@
 			};
 			name = Release;
 		};
-		683E99A3CF1B6FF8CE6BE3F8F4E70873 /* Release */ = {
+		8DF0D43AF70F04451627555CE20D7056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82C7E7FC077740DC6E407CE4A4650EFC /* Emmlytics.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Emmlytics/Emmlytics-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Emmlytics/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Emmlytics/Emmlytics.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Emmlytics;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B80F31746EDB051D59FBB355C9EC422C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82C7E7FC077740DC6E407CE4A4650EFC /* Emmlytics.xcconfig */;
 			buildSettings = {
@@ -745,41 +742,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Release;
-		};
-		9C154A2D1EB8386ED0F5A846E7B109D8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82C7E7FC077740DC6E407CE4A4650EFC /* Emmlytics.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Emmlytics/Emmlytics-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Emmlytics/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Emmlytics/Emmlytics.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Emmlytics;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
+			name = Debug;
 		};
 		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -825,6 +788,40 @@
 			};
 			name = Release;
 		};
+		F94FE5E0DC8D012F4509AF7472E6C1F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82C7E7FC077740DC6E407CE4A4650EFC /* Emmlytics.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Emmlytics/Emmlytics-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Emmlytics/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Emmlytics/Emmlytics.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Emmlytics;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -846,11 +843,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BFC1E520EE0F59A0906067AC27EC1E07 /* Build configuration list for PBXNativeTarget "Emmlytics" */ = {
+		CC24ABA05FA357D0B3972EEAB2B583FF /* Build configuration list for PBXNativeTarget "Emmlytics-Emmlytics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				48C79B09704DA200F90DB20070B1D2EB /* Debug */,
-				9C154A2D1EB8386ED0F5A846E7B109D8 /* Release */,
+				B80F31746EDB051D59FBB355C9EC422C /* Debug */,
+				34F7836A2E97C8C56923501D8BBE5491 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D992A0BCC2D25321657D5BF13340BB3E /* Build configuration list for PBXNativeTarget "Emmlytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DF0D43AF70F04451627555CE20D7056 /* Debug */,
+				F94FE5E0DC8D012F4509AF7472E6C1F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -860,15 +866,6 @@
 			buildConfigurations = (
 				0A86782466F4FE82E4898B71FEC9EF3F /* Debug */,
 				5319D2C5EA046ABC6B20477522225A6D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F10DDEAD0D7E8053F0B00CF5D65C27F6 /* Build configuration list for PBXNativeTarget "Emmlytics-Emmlytics" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3003E6BEA5E0280E44A215E4C262AB36 /* Debug */,
-				683E99A3CF1B6FF8CE6BE3F8F4E70873 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -4,11 +4,19 @@ import Foundation
 
 open class emmViewController: UIViewController {
     
-    @IBAction func sendAnalytic(_ sender: Any) {
+  /*  @IBAction func sendAnalytic(_ sender: Any) {
         
         Emmlytics().sendAnalytics(event:"ButtonPress")
         
     }
+    */
+    
+    
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.feedTXTview.becomeFirstResponder()
+   }
     
     @IBOutlet weak var feedTXTview: UITextView!
     
