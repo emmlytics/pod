@@ -352,7 +352,7 @@ extension URLSession {
             do {
                 if let data = data {
                     
-                    let resultJson = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject]
+                    var resultJson = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject]
                     currentTime = NSDate.timeIntervalSinceReferenceDate
                     let elapsedTime = currentTime - startTime
                     

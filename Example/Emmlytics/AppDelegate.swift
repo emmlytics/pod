@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
        //The following three Lines are all you need to configure.
         
-        UserDefaults.standard.set("Dtaylor@gmail.com", forKey: "emmlyticsUserID")
+        UserDefaults.standard.set("Justyn@gmail.com", forKey: "emmlyticsUserID")
         UserDefaults.standard.set("https://emmlytics.mynetgear.com:8443/", forKey: "emmlyticsURL")
         UserDefaults.standard.set("Pomodoroban", forKey: "emmlyticsAppId")
         
