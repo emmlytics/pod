@@ -275,10 +275,15 @@ extension URLSession {
     open override class func initialize() {
         
         // make sure this isn't a subclass
-        guard self === URLSession.self else { return }
-        let originalSelector = #selector((self.dataTask(with:completionHandler:)) as (URLSession) -> (URLRequest, @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask)
-        let swizzledSelector = #selector((self.my_dataTaskWithRequest(with:completionHandler:)) as (URLSession) -> (URLRequest, @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask)
-        swizzling(self, originalSelector, swizzledSelector)
+        // guard self === URLSession.self else { return }
+       // let originalSelector = #selector((self.dataTask(with:completionHandler:)) as (URLSession) -> (URLRequest, @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask)
+        //let swizzledSelector = #selector((self.my_dataTaskWithRequest(with:completionHandler:)) as (URLSession) -> (URLRequest, @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask)
+       // swizzling(self, originalSelector, swizzledSelector)
+        
+        //This is to disable the monitoring capability
+        
+        
+        
     }
     // Swizzled Method
     func my_dataTaskWithRequest(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) -> URLSessionDataTask {
@@ -291,8 +296,7 @@ extension URLSession {
             
             do {
                 if let data = data {
-                    
-                    var resultJson = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject]
+                    let resultJson = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject]
                     currentTime = NSDate.timeIntervalSinceReferenceDate
                     let elapsedTime = currentTime - startTime
                     let URLfield = response?.url?.absoluteString
